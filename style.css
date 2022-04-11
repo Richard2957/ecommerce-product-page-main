@@ -123,13 +123,54 @@ body {
     grid-area: big;
     padding: 5em;
     border-radius: 16px;
+    position:relative;
 
 }
 
+.imgbigpic{
+    width:100%;
+}
+
+.prevnext{
+    display:none;
+}
+
+
+
+
+
+
 .thumb {
-    border: 2px black dotted;
+
     width: 100%;
     margin-top: 4em;
+    position:relative;
+    background-size: cover;
+    background-repeat:no-repeat;
+    border-radius: 12px;
+   
+}
+.thumb:hover{
+    border:5px var(--orange) solid;
+}
+
+.thumb.selected{
+    border:5px var(--orange) solid;
+    background-image: none;
+   
+}
+.thumb.selected::before{
+content:'';
+filter:saturate(.1) brightness(2);
+background-size: cover;
+position:absolute;
+top:0;
+left:0;
+width:95%;
+height:95%;
+
+z-index: -99;;
+
 }
 
 
@@ -137,19 +178,41 @@ body {
 
 .thumb1 {
     grid-area: small1;
+    background-image: url("./images/image-product-1-thumbnail.jpg");
 }
 
 .thumb2 {
     grid-area: small2;
+    background-image: url("./images/image-product-2-thumbnail.jpg");
+
 }
 
 .thumb3 {
     grid-area: small3;
+    background-image: url("./images/image-product-3-thumbnail.jpg");
+
 }
 
 .thumb4 {
     grid-area: small4;
+    background-image: url("./images/image-product-4-thumbnail.jpg");
+
 }
+
+.thumb1.selected::before{
+    background-image: url("./images/image-product-1-thumbnail.jpg");
+}
+.thumb2.selected::before{
+    background-image: url("./images/image-product-2-thumbnail.jpg");
+}
+.thumb3.selected::before{
+    background-image: url("./images/image-product-3-thumbnail.jpg");
+}
+.thumb4.selected::before{
+    background-image: url("./images/image-product-4-thumbnail.jpg");
+}
+
+
 
 
 
@@ -297,7 +360,7 @@ p {
 
 
 
-@media (max-width:600px) {
+@media (max-width:800px) {
 
     body {
         background-color: beige;
@@ -312,11 +375,15 @@ p {
     .nav {
         position: absolute;
         border: 3px solid red;
-        transform: translateX(-90%);
+        transform: translateX(-100%);
+        transition:transform 600ms ease;
+        z-index: 29;
 
     }
 
-
+.nav.showmenu{
+    transform: translateX(0);
+}
 
     .nav ul {
         flex-direction: column;
@@ -354,6 +421,28 @@ p {
     .bigpic {
         padding: 0;
     }
+
+.prevnext{
+    display:block;
+    position:absolute;
+    top:50%;
+    background-color: white;
+    height:40px;
+    width:40px;
+    background-image: url("./images/icon-previous.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    left:5%;
+    border-radius:50%;
+    z-index: 4;
+}
+.next{
+    background-image: url("./images/icon-next.svg");
+   left:85%;
+   
+}
+
+
 
     .writing {
 
