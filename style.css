@@ -1,0 +1,408 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #ff7d1a;
+    --pale-orange: #ffede0;
+    --very-dark-blue: #1d2025;
+    --dark-grayish-blue: #68707d;
+    --grayish-blue: #b6bcc8;
+    --light-grayish-blue: #f7f8fd;
+    --white: #ffffff;
+    font-size: 62.5%;
+
+}
+
+body {
+    background-color: var(--white);
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+    font-family: 'Kumbh Sans', sans-serif;
+
+
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+    border: 4px green solid;
+}
+
+.topbar {
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid var(--grayish-blue);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-top: 3.7em;
+
+
+}
+
+.hamburger {
+    display: none;
+    margin-left: 3em;
+    margin-right: 5em;
+}
+
+.closemenu {
+    display: none;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-left: 4.8rem;
+
+}
+
+.nav ul li {
+
+    list-style: none;
+    height: 100px;
+    min-width: 76px;
+}
+
+.nav ul li a {
+    display: block;
+    text-decoration: none;
+    border: 4px transparent solid;
+    height: 60%;
+    font-size: 1.8em;
+    text-align: center;
+    color: var(--dark-grayish-blue);
+}
+
+.nav ul li a:hover {
+    border-bottom-color: var(--orange);
+
+}
+
+.basket {
+    margin-left: auto;
+    border: 2px red solid;
+    align-self: top;
+    padding: 0 4em;
+    ;
+}
+
+.avatar>img {
+    width: 50px;
+}
+
+.basket>img {
+    width: 50px;
+
+}
+
+.main img {
+    width: 100%;
+    border-radius: 15px;
+    ;
+}
+
+.main {
+    display: grid;
+    width: 92%;
+    margin: auto;
+    border: 2px blue solid;
+    column-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
+    grid-template-rows: auto 15em;
+    grid-template-areas:
+        "big big big big writing"
+        "small1 small2 small3 small4 orderform";
+}
+
+.bigpic {
+    grid-area: big;
+    padding: 5em;
+    border-radius: 16px;
+
+}
+
+.thumb {
+    border: 2px black dotted;
+    width: 100%;
+    margin-top: 4em;
+}
+
+
+
+
+.thumb1 {
+    grid-area: small1;
+}
+
+.thumb2 {
+    grid-area: small2;
+}
+
+.thumb3 {
+    grid-area: small3;
+}
+
+.thumb4 {
+    grid-area: small4;
+}
+
+
+
+.writing {
+    grid-area: writing;
+}
+
+.orderingform {
+    grid-area: orderform;
+}
+
+.writing {
+    border: 2px silver solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.orange_title {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: .2em;
+}
+
+.big_title {
+    font-weight: 700;
+    font-size: 5em;
+}
+
+p {
+    font-size: 1.8em;
+    color: var(--dark-grayish-blue);
+    line-height: 2em;
+}
+
+.pricing {
+    border: 2px red solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "now discount""orig .";
+}
+
+.pricing>div:nth-child(1) {
+    grid-area: now;
+    font-weight: 700;
+    font-size: 3.5em;
+    color: black;
+}
+
+.pricing>div:nth-child(2) {
+    grid-area: discount;
+    text-align: center;
+    margin-left: 2em;
+    padding: .5em 0;
+    font-size: 1.5em;
+    color: var(--orange);
+    background: var(--pale-orange);
+
+
+}
+
+.pricing>div:nth-child(3) {
+    grid-area: orig;
+    font-weight: 500;
+    font-size: 2.5em;
+    text-decoration: line-through;
+    color: var(--grayish-blue);
+}
+
+.oacta{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-apart;
+    width:100%;
+    align-items:center;
+    border:orange 4px dotted;
+}
+
+.orderingform {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--light-grayish-blue);
+
+flex-basis:50%;
+}
+
+.orderingform>* {
+    font-size: 2em;
+    background-color: var(--light-grayish-blue);
+    color: orange;
+    align-self: center;
+    padding: .5em 3em;
+}
+
+.orderingform>div:nth-child(2) {
+    color: black;
+}
+
+.cta {
+    margin-left: 1.5em;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border-radius: 20px;
+    flex-basis: 50%;
+    align-items: flex-start;
+    padding:10px 0;
+}
+
+.cta>img {
+    width: 1.3em;
+    margin-right: .5em;
+    display: inline-block;
+    filter: brightness(500)
+}
+
+
+@media (max-width:960px) {
+
+    body {
+        background-color: yellow;
+    }
+
+}
+
+.big_title {
+    font-size: 4em;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.orderingform>* {
+    padding-left: .6em;
+    padding-right: .6em;
+
+}
+
+
+
+@media (max-width:600px) {
+
+    body {
+        background-color: beige;
+    }
+
+    .hamburger,
+    .closemenu {
+        display: block;
+    }
+
+
+    .nav {
+        position: absolute;
+        border: 3px solid red;
+        transform: translateX(-90%);
+
+    }
+
+
+
+    .nav ul {
+        flex-direction: column;
+        background: white;
+        margin-left: 0;
+        padding-top: 4em;
+        align-items: flex-start;
+        min-height: 100vh;
+    }
+
+    .nav ul li {
+        height: 40px;
+        text-align: left;
+        padding: 0 5em 0 2em;
+    }
+
+    .nav ul li a {
+        text-align: left;
+    }
+
+    .main {
+
+        width: 92%;
+        margin: auto;
+
+        column-gap: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 50em 15em;
+        grid-template-areas:
+            "big"
+            "writing"
+            "oacta";
+    }
+
+    .bigpic {
+        padding: 0;
+    }
+
+    .writing {
+
+        margin-top: 2em;
+        padding: 3em;
+        justify-content: space-apart;
+    }
+
+    .orange_title {
+        padding-top: 1em;
+    }
+
+    .big_title {
+        font-size: 2.5em;
+
+
+    }
+
+    .oacta{
+        grid-area: oacta;
+        flex-direction: column;
+    }
+    .pricing {
+        grid-template-areas: "now discount orig ";
+        grid-template-columns: 25% 25% 50%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .pricing>div:nth-child(1) {
+        font-size: 2.5em;
+    }
+
+    .pricing>div:nth-child(2) {
+        font-size: 1.5em;
+    }
+
+    .pricing>div:nth-child(3) {
+        font-size: 1.5em;
+        margin-left: auto;
+    }
+.orderingform{
+    flex-direction: row;
+    width:80%;
+  
+}
+.cta{
+    width:100%;
+    margin:30px 0;
+}
+
+}
