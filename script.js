@@ -3,7 +3,6 @@ let itemsInBasket=0;
 let itemsGonnaAdd=0;
 const cta=document.querySelector(".cta");
 
-
 // Event listeners for clicking on thumbnails (not mobile)
 const thumbs = [...document.querySelectorAll(".thumb")];
 thumbs.forEach((thumb, index, thumbs) => {
