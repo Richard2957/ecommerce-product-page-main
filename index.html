@@ -17,6 +17,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
+      margin-top: 80px;
     }
 
     .attribution a {
@@ -28,6 +29,25 @@
 <body>
 
   <div class="container">
+
+    <div class="mybasket">
+      <div class="mybasket-title">Cart</div>
+      <div class="mybasket-empty">Your cart is empty</div>
+      <div class="mybasket-full">
+
+        <div class="icon"><img src="./images/image-product-1-thumbnail.jpg"></div>
+        <div class="details">
+          <p>Fall Limited Edition sneakers</p>
+          <p>£125.00 x 3 <span>£375.00</span></p>
+        </div>
+        <div class="trashcan"><img src="./images/icon-delete.svg" alt=""></div>
+
+      </div>
+<div class="checkout">Checkout</div>
+
+    </div>
+
+
 
     <div class="topbar">
       <div class="hamburger">
@@ -47,7 +67,10 @@
         </ul>
       </div>
 
-      <div class="basket"><a href=""><img src="./images/icon-cart.svg" alt="My basket"></a></div>
+      <div class="basket">
+        <img src="./images/icon-cart.svg" alt="My basket">
+        <div class="basketdisplay"></div>
+      </div>
       <div class="avatar"><img src="./images/image-avatar.png" alt="My avatar"></div>
 
     </div>
@@ -56,19 +79,19 @@
 
 
     <div class="main">
-<div class="bigpic">
-      <img class='imgbigpic' src="./images/image-product-1.jpg" alt="Picture of product">
-      <div class="prevnext prev" ></div>
-      <div class="prevnext next" ></div>
-     
-    </div>
-     
-     
-     
-      <div class='thumb thumb1 selected ' ></div>
-      <div class='thumb thumb2 ' ></div>
-      <div class='thumb thumb3' ></div>
-      <div class='thumb thumb4' ></div>
+      <div class="bigpic">
+        <img class='imgbigpic' src="./images/image-product-1.jpg" alt="Picture of product">
+        <div class="prevnext prev"></div>
+        <div class="prevnext next"></div>
+
+      </div>
+
+
+
+      <div class='thumb thumb1 selected '></div>
+      <div class='thumb thumb2 '></div>
+      <div class='thumb thumb3'></div>
+      <div class='thumb thumb4'></div>
 
 
 
@@ -105,7 +128,7 @@
 
         </div>
 
-        <div class="cta"><img src="./images/icon-cart.svg">Add to cart</div>
+        <div class="cta cta-disabled"><img src="./images/icon-cart.svg">Add to cart</div>
 
       </div>
 
@@ -114,23 +137,11 @@
 
   </div>
 
-
-
-
-
   </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://codepen.io/richard2957">Richard Marks</a>.
   </div>
-
-
-
-
-
-
-
 </body>
-
 </html>
